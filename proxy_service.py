@@ -43,7 +43,7 @@ def get_next_proxy():
     global _current_proxy
 
     if not PROXY_POOL:
-        logging.warning("⚠ Proxy pool empty")
+        logging.warning("⚠️ Proxy pool empty")
         return None
 
     _current_proxy = random.choice(PROXY_POOL)
@@ -92,5 +92,5 @@ def get_working_proxy():
         if test_proxy(proxy):
             return proxy
 
-    logging.error("⛔ No working proxy found")
+    logging.error("⛔️ No working proxy found")
     return None
